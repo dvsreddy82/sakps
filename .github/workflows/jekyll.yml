@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -19,9 +19,11 @@ jobs:
         ruby-version: 3.1
         bundler-cache: true
     
+    - name: Install dependencies
+      run: bundle install
+    
     - name: Build with Jekyll
-      run: bundle exec jekyll build
+      run: bundle exec jekyll build --baseurl "${{ github.event.repository.name }}"
     
     - name: Test
       run: bundle exec jekyll doctor
-
