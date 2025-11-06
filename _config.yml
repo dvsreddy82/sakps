@@ -1,0 +1,53 @@
+# Site Settings
+title: "Sri Ankalamma Kennels and Pet Store"
+description: "Your trusted partner for pet care, boarding, and supplies in Bangalore"
+url: "https://dvsreddy82.github.io"
+baseurl: "/sakps"
+
+# Build Settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Site Variables
+site_name: "Sri Ankalamma Kennels"
+site_tagline: "Your Trusted Partner for Pet Care & Boarding"
+location: "Bangalore, Karnataka, India"
+google_maps_url: "https://www.google.com/maps/place/Sri+Ankalamma+Kennels+and+pet+store/@12.9884181,77.7855768,980m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bae0f52774168cf:0xcf0214c7b0308586!8m2!3d12.9884129!4d77.7881517!16s%2Fg%2F11y48pmsdb!5m1!1e1?entry=ttu"
+google_maps_embed: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15551.234567890123!2d77.7881517!3d12.9884129!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae0f52774168cf%3A0xcf0214c7b0308586!2sSri%20Ankalamma%20Kennels%20and%20pet%20store!5e0!3m2!1sen!2sin!4v1699123456789!5m2!1sen!2sin"
+
+# Services
+services:
+  - icon: "🏠"
+    title: "Pet Boarding"
+    description: "Safe and comfortable boarding facilities for your pets when you're away. We provide 24/7 care and attention."
+  - icon: "🛒"
+    title: "Pet Store"
+    description: "Wide range of pet supplies including food, toys, accessories, and grooming products from trusted brands."
+  - icon: "💊"
+    title: "Pet Care"
+    description: "Comprehensive pet care services including health monitoring, feeding, and daily exercise routines."
+  - icon: "🐕"
+    title: "Kennel Services"
+    description: "Professional kennel services with spacious accommodations and personalized care for each pet."
+  - icon: "📞"
+    title: "Consultation"
+    description: "Expert advice on pet care, nutrition, and wellness to help you make the best decisions for your pet."
+  - icon: "⭐"
+    title: "Quality Service"
+    description: "We maintain the highest standards of cleanliness, safety, and care for all our furry guests."
+
+# Features
+features:
+  - icon: "🏠"
+    title: "Safe Boarding"
+    description: "Comfortable and secure boarding facilities"
+  - icon: "🛒"
+    title: "Pet Supplies"
+    description: "Quality products for all your pet needs"
+  - icon: "❤️"
+    title: "Expert Care"
+    description: "Experienced staff dedicated to pet wellness"
+

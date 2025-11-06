@@ -1,0 +1,37 @@
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Visit Us</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="info-item">
+                    <h3>📍 Location</h3>
+                    <p>{{ site.site_name }}</p>
+                    <p>{{ site.location }}</p>
+                </div>
+                <div class="info-item">
+                    <h3>🗺️ Find Us</h3>
+                    <p>Click the map to get directions</p>
+                    <a href="{{ site.google_maps_url }}" 
+                       target="_blank" 
+                       class="btn btn-secondary">
+                        Open in Google Maps
+                    </a>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="{{ site.google_maps_embed }}" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="{{ site.site_name }} Location">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+

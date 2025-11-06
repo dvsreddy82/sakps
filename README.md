@@ -1,6 +1,6 @@
 # Sri Ankalamma Kennels and Pet Store
 
-A modern, responsive static website for Sri Ankalamma Kennels and Pet Store, optimized for GitHub Pages.
+A modern, responsive Jekyll website for Sri Ankalamma Kennels and Pet Store, optimized for GitHub Pages.
 
 ## Features
 
@@ -8,7 +8,8 @@ A modern, responsive static website for Sri Ankalamma Kennels and Pet Store, opt
 - 📱 Mobile-friendly interface
 - 🗺️ Integrated Google Maps
 - ⚡ Fast loading and optimized
-- 🌐 GitHub Pages ready
+- 🌐 GitHub Pages ready with Jekyll
+- 🔧 Easy to customize via `_config.yml`
 
 ## Website Sections
 
@@ -19,27 +20,49 @@ A modern, responsive static website for Sri Ankalamma Kennels and Pet Store, opt
 
 ## Technologies Used
 
+- Jekyll (Static Site Generator)
 - HTML5
 - CSS3 (with CSS Grid and Flexbox)
 - Vanilla JavaScript
 - Google Maps Embed API
 
+## Jekyll Structure
+
+```
+sakps/
+├── _config.yml          # Jekyll configuration
+├── _layouts/
+│   └── default.html     # Main layout template
+├── _includes/           # Reusable components
+│   ├── navigation.html
+│   ├── footer.html
+│   ├── hero.html
+│   ├── about.html
+│   ├── services.html
+│   └── contact.html
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       └── script.js
+├── index.html           # Homepage
+├── Gemfile              # Ruby dependencies
+└── README.md
+```
+
 ## Setup for GitHub Pages
 
-This website is ready to be published on GitHub Pages. Follow these steps:
+This Jekyll website is ready to be published on GitHub Pages. GitHub Pages will automatically build and deploy your Jekyll site.
 
-1. **Create a GitHub Repository**
+1. **Push to GitHub** (already done)
    ```bash
-   git init
    git add .
-   git commit -m "Initial commit: Sri Ankalamma Kennels website"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-   git push -u origin main
+   git commit -m "Convert to Jekyll"
+   git push origin main
    ```
 
 2. **Enable GitHub Pages**
-   - Go to your repository on GitHub
+   - Go to your repository on GitHub: `https://github.com/dvsreddy82/sakps`
    - Click on "Settings"
    - Scroll down to "Pages" section
    - Under "Source", select "Deploy from a branch"
@@ -47,29 +70,62 @@ This website is ready to be published on GitHub Pages. Follow these steps:
    - Click "Save"
 
 3. **Access Your Website**
-   - Your website will be available at: `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
-   - It may take a few minutes for the changes to propagate
+   - Your website will be available at: `https://dvsreddy82.github.io/sakps/`
+   - GitHub Pages will automatically build your Jekyll site
+   - It may take 1-2 minutes for the site to be live
 
 ## Local Development
 
-To view the website locally:
+To run the website locally with Jekyll:
 
-1. Clone the repository
-2. Open `index.html` in a web browser
-3. Or use a local server:
+1. **Install Ruby and Bundler** (if not already installed)
    ```bash
-   # Using Python
-   python -m http.server 8000
+   # macOS (using Homebrew)
+   brew install ruby
    
-   # Using Node.js (if you have http-server installed)
-   npx http-server
+   # Or use system Ruby
    ```
+
+2. **Install Jekyll and dependencies**
+   ```bash
+   bundle install
+   ```
+
+3. **Run the Jekyll server**
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+4. **View the website**
+   - Open your browser and go to: `http://localhost:4000/sakps/`
+   - The site will auto-reload when you make changes
 
 ## Customization
 
-- Edit `index.html` to modify content
-- Edit `styles.css` to change colors, fonts, and styling
-- Edit `script.js` to modify interactive features
+### Site Configuration
+Edit `_config.yml` to change:
+- Site title and description
+- Services and features
+- Google Maps URLs
+- Site variables
+
+### Styling
+- Edit `assets/css/styles.css` to change colors, fonts, and styling
+- CSS variables are defined at the top of the file for easy customization
+
+### Content
+- Edit `_includes/` files to modify sections
+- Edit `index.html` to change page structure
+- Edit `assets/js/script.js` to modify interactive features
+
+### Adding New Services
+Add services in `_config.yml`:
+```yaml
+services:
+  - icon: "🏠"
+    title: "New Service"
+    description: "Service description"
+```
 
 ## Location
 
@@ -81,4 +137,3 @@ Bangalore, Karnataka, India
 ## License
 
 © 2025 Sri Ankalamma Kennels and Pet Store. All rights reserved.
-

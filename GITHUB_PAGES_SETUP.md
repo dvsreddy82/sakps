@@ -1,60 +1,82 @@
-# GitHub Pages Setup Guide
+# GitHub Pages Setup Guide (Jekyll)
 
 ## Quick Start
 
-Your website is ready to be published! Follow these steps:
+Your Jekyll website is ready to be published! GitHub Pages will automatically build and deploy your Jekyll site.
 
-### Step 1: Create a GitHub Repository
+### Step 1: Push Your Code (Already Done!)
 
-1. Go to [GitHub](https://github.com) and sign in
-2. Click the "+" icon in the top right corner
-3. Select "New repository"
-4. Name it (e.g., `sri-ankalamma-kennels` or `sakps`)
-5. **Do NOT** initialize with README, .gitignore, or license (we already have these)
-6. Click "Create repository"
+Your code has been pushed to: `https://github.com/dvsreddy82/sakps`
 
-### Step 2: Push Your Code to GitHub
+### Step 2: Enable GitHub Pages
 
-Run these commands in your terminal (replace `YOUR_USERNAME` and `YOUR_REPO_NAME` with your actual values):
-
-```bash
-cd /Users/ravikirank/projects/sakps
-
-# Add your GitHub repository as remote
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-
-# Push your code
-git branch -M main
-git push -u origin main
-```
-
-### Step 3: Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Click on **Settings** (top menu)
-3. Scroll down to **Pages** in the left sidebar
-4. Under **Source**, select:
+1. Go to your repository: https://github.com/dvsreddy82/sakps/settings/pages
+2. Under **Source**, select:
    - Branch: `main`
    - Folder: `/ (root)`
-5. Click **Save**
+3. Click **Save**
 
-### Step 4: Access Your Website
+### Step 3: Access Your Website
 
-- Your website will be live at: `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
+- Your website will be live at: `https://dvsreddy82.github.io/sakps/`
+- GitHub Pages will automatically detect Jekyll and build your site
 - It may take 1-2 minutes for the site to be available
 - GitHub will show you the URL once it's ready
 
-### Step 5: Custom Domain (Optional)
+### Step 4: Verify Build Status
 
-If you have a custom domain:
-1. In the Pages settings, add your domain
-2. Update your DNS records as instructed by GitHub
+- Go to the **Actions** tab in your repository
+- You'll see the Jekyll build process
+- Green checkmark = site built successfully
+
+## Local Development
+
+To test your Jekyll site locally:
+
+```bash
+# Install dependencies
+bundle install
+
+# Run Jekyll server
+bundle exec jekyll serve
+
+# Visit http://localhost:4000/sakps/
+```
+
+## Customization
+
+### Update Site Information
+Edit `_config.yml` to change:
+- Site title and description
+- Services and features
+- Location information
+- Google Maps URLs
+
+### Update Content
+- Edit `_includes/` files for sections
+- Edit `assets/css/styles.css` for styling
+- Edit `assets/js/script.js` for interactivity
 
 ## Troubleshooting
 
-- **Site not loading?** Wait a few minutes and refresh
-- **Changes not showing?** Make sure you've pushed to the `main` branch
-- **404 error?** Check that `index.html` is in the root directory
+- **Site not loading?** 
+  - Check the Actions tab for build errors
+  - Wait 1-2 minutes after enabling Pages
+  - Verify `_config.yml` has correct `baseurl: "/sakps"`
+
+- **Changes not showing?**
+  - Make sure you've pushed to the `main` branch
+  - Check Actions tab for build status
+  - Clear browser cache
+
+- **404 error?**
+  - Verify `baseurl` in `_config.yml` matches your repository name
+  - Check that `index.html` exists in root
+
+- **Build errors?**
+  - Check Actions tab for error messages
+  - Verify YAML syntax in `_config.yml`
+  - Ensure all includes are in `_includes/` folder
 
 ## Updating Your Website
 
@@ -67,5 +89,12 @@ git commit -m "Update website content"
 git push origin main
 ```
 
-Changes will be live within 1-2 minutes!
+GitHub Pages will automatically rebuild your site within 1-2 minutes!
 
+## Jekyll Benefits
+
+✅ Automatic site generation  
+✅ Easy content management via `_config.yml`  
+✅ Modular includes for reusable components  
+✅ GitHub Pages native support  
+✅ Fast builds and deployments  

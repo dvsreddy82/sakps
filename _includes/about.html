@@ -1,0 +1,22 @@
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Welcome to {{ site.site_name }}, a premier destination for all your pet care needs in Bangalore. We are dedicated to providing exceptional care, quality products, and professional services for your beloved pets.</p>
+                <p>With years of experience in pet care, we understand that your pets are family. Our facility offers a safe, clean, and comfortable environment where your pets can thrive and feel at home.</p>
+                <div class="features">
+                    {% for feature in site.features %}
+                    <div class="feature-item">
+                        <span class="feature-icon">{{ feature.icon }}</span>
+                        <h3>{{ feature.title }}</h3>
+                        <p>{{ feature.description }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
