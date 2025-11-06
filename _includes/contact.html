@@ -15,6 +15,15 @@
                     <p>Pincode: {{ site.address.pincode }}</p>
                 </div>
                 <div class="info-item">
+                    <h3>📞 Contact Us</h3>
+                    <p>Call us for inquiries and bookings</p>
+                    <a href="tel:{{ site.phone | replace: ' ', '' | replace: '+', '' }}" 
+                       class="btn btn-secondary"
+                       style="margin-top: 0.5rem;">
+                        {{ site.phone }}
+                    </a>
+                </div>
+                <div class="info-item">
                     <h3>🗺️ Find Us</h3>
                     <p>Click the map to get directions</p>
                     <a href="{{ site.google_maps_url }}" 
