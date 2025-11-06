@@ -6,8 +6,13 @@
             <div class="contact-info">
                 <div class="info-item">
                     <h3>📍 Location</h3>
-                    <p>{{ site.site_name }}</p>
-                    <p>{{ site.location }}</p>
+                    <p><strong>{{ site.site_name }}</strong></p>
+                    <p>{{ site.address.site_no }},</p>
+                    <p>{{ site.address.street }},</p>
+                    <p>{{ site.address.road }},</p>
+                    <p>{{ site.address.area }}</p>
+                    <p>{{ site.address.city }}</p>
+                    <p>Pincode: {{ site.address.pincode }}</p>
                 </div>
                 <div class="info-item">
                     <h3>🗺️ Find Us</h3>
